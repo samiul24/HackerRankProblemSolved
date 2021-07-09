@@ -1,0 +1,105 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+import operator
+
+if __name__ == '__main__':
+    s = input()
+    dict={}
+    for i in s:
+        if i not in dict.keys():
+            #print(i)
+            dict[i] = 1
+            #print(dict)
+        else:
+            j=dict[i]
+            j=j+1
+            dict[i]=j
+    #print(dict)
+
+sorted_dict = sorted(dict.items(), key=operator.itemgetter(0))
+sorted_dict = sorted(sorted_dict, key=operator.itemgetter(1),reverse=True)
+#print(sorted_dict)
+j=0
+for k in sorted_dict:
+    if j<3:
+    #print(type(k))
+        print(str(k[0]) +' '+ str(k[1]))
+        j += 1
+    else:
+        break
+    """if j<=3:
+        print(type(k))
+        print(k[0]+' '+k[1])
+        j += 1
+    else:
+        break"""
+    
+     
+"""i= 1
+for key in dict:
+    if i<=3:
+        print(key+' '+str(dict[key]))
+        i += 1
+    else:
+        break"""
+
+
+==========
+
+
+S = stdin.readline()
+d = {}
+for c in S:
+    if c in d:
+        d[c] += 1
+    else:
+        d[c] = 1
+        
+data = [[d[c],c] for c in d.keys()]
+data.sort(key = lambda e: [-e[0],e[1]])
+
+for x in range(3):
+    print data[x][1], data[x][0]
+
+
+===============
+
+S = input()
+
+cnt = [[10000,chr(ord('a')+i)] for i in range(ord('z')-ord('a')+1)]
+
+for s in S:
+    cnt[ord(s)-ord('a')][0] -= 1
+cnt.sort()
+for i in range(3):
+    print(cnt[i][1], 10000-cnt[i][0])
+
+==================
+
+from collections import Counter
+ctr = Counter(input())
+ans = sorted((-x, c) for c, x in ctr.items())[:3]
+for nx, c in ans:
+    print(c, -nx)
+
+================
+
+from collections import Counter
+ctr = Counter(input())
+print(ctr)
+print(ctr.items())
+for c,x in ctr.items():
+    print(str(c)+str(x))
+xx=[(-x, c) for c, x in ctr.items()]
+print(xx)
+ans = sorted((-x, c) for c, x in ctr.items())[:3]
+#ans = sorted(xx)[:3]
+for nx, c in ans:
+    print(c, -nx)
+
+    

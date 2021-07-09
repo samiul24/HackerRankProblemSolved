@@ -1,0 +1,25 @@
+X = int(raw_input())
+Y = int(raw_input())
+Z = int(raw_input())
+N = int(raw_input())
+lis = [[x, y, z] for x in range(X+1) for y in range(Y+1) for z in range(Z+1) if x + y + z != N]
+print lis
+
+=============
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+a = [int(raw_input()) for x in range(4)]
+print [[x, y, z] for x in xrange(a[0]+1) for y in xrange(a[1]+1) for z in xrange(a[2]+1) if x+y+z != a[3]]
+
+=============
+
+X = int(raw_input())
+Y = int(raw_input())
+Z = int(raw_input())
+N = int(raw_input())
+print [[a,b,c] for a in xrange(X+1) for b in xrange(Y+1) for c in xrange(Z+1) if a+b+c!=N]
+
+==============
+
+lst=[int(raw_input())+1 for i in range(4)]
+print [[x,y,z] for x in range(lst[0]) for y in range(lst[1]) for z in range(lst[2]) if x+y+z!=lst[3]-1]
