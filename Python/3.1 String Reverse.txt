@@ -1,0 +1,9 @@
+l=[]
+for i in 'Binate':
+    l.append(i)
+    print(i)
+print(l)
+z=[]
+for x in range(len(l)-1,-1,-1):
+    z.append(l[x])
+print(z[0]+z[1]+z[2]+z[3]+z[4]+z[5])

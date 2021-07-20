@@ -1,0 +1,12 @@
+transposed = []
+matrix = [[1, 2, 3, 4], [4, 5, 6, 8]]
+
+for i in range(len(matrix[0])):
+    t_l=[]
+    for x in matrix:
+        t_l.append(x[i])
+    transposed.append(t_l)
+print(transposed)
+
+============
+
