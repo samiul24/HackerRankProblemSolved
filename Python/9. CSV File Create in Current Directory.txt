@@ -1,0 +1,14 @@
+>>> os.getcwd()
+'C:\\Users\\88017\\AppData\\Local'
+>>> os.chdir("E:\For Business\Python OS Test\Samiul")
+>>> os.getcwd()
+'E:\\For Business\\Python OS Test\\Samiul'
+>>> open("guru99.txt","w+")
+<_io.TextIOWrapper name='guru99.txt' mode='w+' encoding='cp1252'>
+>>> import csv
+>>> with open('Data.csv', 'w') as csvfile:
+	wrt=csv.writer(csvfile)
+	for i in range(100):
+		n='Samiul'
+		a='Islam'
+		wrt.writerow([n,a])
